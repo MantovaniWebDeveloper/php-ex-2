@@ -6,10 +6,10 @@
   </head>
   <body>
     <?php
-      $varPassata = "Boolean";
+      $varPassata = $_GET["password"];
      ?>
      <!--UTILIZZO LA FORMA CONTRATTA DEL IF COSI DA INIETTARE SUBITO LO STILE -->
-     <h2 style="<?php echo($varPassata == "Boolean"  ? 'color:green;' :  'color:red;') ?>">Boolean</h2>
+     <h2 style="<?php echo($varPassata == "Boolean"  ? 'color:green;' :  'color:red;') ?>"><?php echo $varPassata ?></h2>
 
   </body>
 </html>

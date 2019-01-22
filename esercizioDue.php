@@ -16,25 +16,37 @@
       $partite = [
         [
           'squadraCasa' => 'Virtus',
-          'squadraOspite' => 'Ferrara kleb'.
+          'squadraOspite' => 'Ferrara kleb',
           'puntiCasa' => 107,
           'puntiOspite' => 109,
         ],
         [
           'squadraCasa' => 'Armani milano',
-          'squadraOspite' => 'New basket brindisi'.
+          'squadraOspite' => 'New basket brindisi',
           'puntiCasa' => 97,
           'puntiOspite' => 102,
         ],
         [
           'squadraCasa' => 'Acquila basket trento',
-          'squadraOspite' => 'Polisportiva dinamo'.
+          'squadraOspite' => 'Polisportiva dinamo',
           'puntiCasa' => 87,
           'puntiOspite' => 83,
         ],
-      ] ;
+      ];
 
+      var_dump($partite);
      ?>
+
+     <!-- Stampiamo a schermo tutte le
+          partite con questo schema, tenendo conto che il punteggio potrebbe non
+          essere disponibile
+          Olimpia Milano - Cantù | 55-60-->
+
+          <ul>
+            <?php foreach ($partite as $partita): ?>
+              <li><?php echo $partita["squadraCasa"]; ?> - <?php echo $partita["squadraOspite"]; ?> | <?php echo $partita["puntiCasa"]; ?> - <?php echo $partita["puntiOspite"]; ?></li>
+            <?php endforeach; ?>
+          </ul>
 
   </body>
 </html>
